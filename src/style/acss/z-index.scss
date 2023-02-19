@@ -1,0 +1,12 @@
+/*
+  层级
+  [z-normal]{
+    z-index: 1;
+  }
+  ...
+*/
+@each $style in (normal $index-normal, top $index-top, popper $index-popper){
+  [z-#{nth($style, 1)}] {
+    z-index: #{nth($style, 2)};
+  }
+}
